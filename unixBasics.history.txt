@@ -1,0 +1,15 @@
+  219  git push
+  220  vi oops2
+  221  git add oops2
+  222  git commit -m 'removing oops2'
+  223  git push
+  224  touch never
+  226  git add never
+  227  git reset never
+  228  man rm
+  229  man cp
+  230  history > unixBasics.history.txt
+  231  vi unixBasics.history.txt
+  232  git status
+  233  rm never
+  234  man history
