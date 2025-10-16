@@ -1,0 +1,5 @@
+gene1:	TTTTTTT
+gene2:	TTTAAAA
+gene3:	CGGGCCC
+
+
