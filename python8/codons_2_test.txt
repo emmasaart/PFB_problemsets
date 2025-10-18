@@ -1,0 +1,4 @@
+>c0_g1_i1 len=1163 path=[1:0-1162]
+[['GAA', 'ATT', 'CCG', 'GAA', 'TTC', 'C', ''], ['AAA', 'TTC', 'CGG', 'AAT', 'TCC', ''], ['AAT', 'TCC', 'GGA', 'ATT', 'CC', ''], ['GGA', 'ATT', 'CCG', 'GAA', 'TTT', 'C', ''], ['GAA', 'TTC', 'CGG', 'AAT', 'TTC', ''], ['AAT', 'TCC', 'GGA', 'ATT', 'TC', '']]
+>c1_g1_i1 len=784 path=[50:0-783]
+[['AAA', 'ATT', 'GCA', 'AAA', 'TTG', 'C', ''], ['AAA', 'TTG', 'CAA', 'AAT', 'TGC', ''], ['AAT', 'TGC', 'AAA', 'ATT', 'GC', ''], ['GCA', 'ATT', 'TTG', 'CAA', 'TTT', 'T', ''], ['CAA', 'TTT', 'TGC', 'AAT', 'TTT', ''], ['AAT', 'TTT', 'GCA', 'ATT', 'TT', '']]
