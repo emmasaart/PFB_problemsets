@@ -25,10 +25,10 @@ def gc_content(seq):
     return(gc_cont)
 
 #get sequence name, description, and sequence
-# for seq_record in SeqIO.parse(filename,"fasta"):
-#     print('ID', seq_record.id)
-#     print('Description', seq_record.description)
-#     print('Sequence', seq_record.seq)
+for seq_record in SeqIO.parse(filename,"fasta"):
+    print('ID', seq_record.id)
+    print('Description', seq_record.description)
+    print('Sequence', seq_record.seq)
 
 
 #get stats about the total content present
