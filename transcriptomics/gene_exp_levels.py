@@ -4,6 +4,7 @@ import sys, re
 
 filename = sys.argv[1]
 
+#read the .bam file and organize into a dictionary containing a set of all unique read #s per gene id
 gene_id_dict = {}
 with open (filename, 'r') as file_read:
     for line in file_read:
@@ -14,7 +15,7 @@ with open (filename, 'r') as file_read:
                 gene_id_dict[gene_id] = set()
         gene_id_dict[gene_id].add(temp_split[0])
 
-
+#count the #reads per gene id
 gene_reads_count = {}
 for gene_id in gene_id_dict:
     reads_count = len(gene_id_dict[gene_id])
@@ -22,6 +23,7 @@ for gene_id in gene_id_dict:
     print(gene_id_dict[gene_id])
     gene_reads_count[gene_id] = reads_count
 
+#sort genes by most to least reads
 gene_reads_count = dict(sorted(gene_reads_count.items(), key =lambda reads_tuple: reads_tuple[1], reverse = True))
 
 for gene_id in gene_reads_count:
