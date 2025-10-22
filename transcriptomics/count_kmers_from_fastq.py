@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import os, sys
+import os, sys, math
 
 from sequence_to_kmer_list import *
 from fastq_file_to_sequence_list import *
@@ -31,6 +31,22 @@ def count_kmers(kmer_list):
         else:
             kmer_count_dict[kmer] += 1
     return kmer_count_dict
+
+def kmer_entropy(kmer):
+    kmer_nt_counts = {}
+    unique = set(kmer)
+    total_nts = len(kmer)
+    for nt in unique:
+        percent = float(kmer.count(nt) / total_nts)
+        kmer_nt_counts[nt] = percent
+    ent_funct = 0
+    for nt in kmer_nt_counts:
+        if kmer_nt_counts[nt] == 0:
+            continue
+        else:
+            ent_funct += kmer_nt_counts[nt]*math.log2(kmer_nt_counts[nt])
+    entropy = -(ent_funct)
+    return entropy
 
 
 def main():
@@ -82,7 +98,7 @@ def main():
 
 
     for kmer in unique_kmers:
-        print("{}: {}".format(kmer, sorted_kmer_dict[kmer]))
+        print(f'{kmer}:\t{sorted_kmer_dict[kmer]}\t{kmer_entropy(kmer)}')
 
 
     sys.exit(0)  # always good practice to indicate worked ok!
